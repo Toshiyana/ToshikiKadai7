@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		990C20EC273CBDDB001DCB09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990C20EB273CBDDB001DCB09 /* AppDelegate.swift */; };
 		990C20EE273CBDDB001DCB09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990C20ED273CBDDB001DCB09 /* SceneDelegate.swift */; };
-		990C20F0273CBDDB001DCB09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990C20EF273CBDDB001DCB09 /* ViewController.swift */; };
 		990C20F3273CBDDB001DCB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990C20F1273CBDDB001DCB09 /* Main.storyboard */; };
 		990C20F5273CBDDE001DCB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 990C20F4273CBDDE001DCB09 /* Assets.xcassets */; };
 		990C20F8273CBDDF001DCB09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990C20F6273CBDDF001DCB09 /* LaunchScreen.storyboard */; };
+		990C2102273CC038001DCB09 /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990C2101273CC038001DCB09 /* AdditionViewController.swift */; };
+		990C2104273CC066001DCB09 /* SubtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990C2103273CC066001DCB09 /* SubtractionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		990C20E8273CBDDB001DCB09 /* 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		990C20EB273CBDDB001DCB09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		990C20ED273CBDDB001DCB09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		990C20EF273CBDDB001DCB09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		990C20F2273CBDDB001DCB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		990C20F4273CBDDE001DCB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		990C20F7273CBDDF001DCB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		990C20F9273CBDDF001DCB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		990C2101273CC038001DCB09 /* AdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionViewController.swift; sourceTree = "<group>"; };
+		990C2103273CC066001DCB09 /* SubtractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				990C20EB273CBDDB001DCB09 /* AppDelegate.swift */,
 				990C20ED273CBDDB001DCB09 /* SceneDelegate.swift */,
-				990C20EF273CBDDB001DCB09 /* ViewController.swift */,
+				990C2101273CC038001DCB09 /* AdditionViewController.swift */,
+				990C2103273CC066001DCB09 /* SubtractionViewController.swift */,
 				990C20F1273CBDDB001DCB09 /* Main.storyboard */,
 				990C20F4273CBDDE001DCB09 /* Assets.xcassets */,
 				990C20F6273CBDDF001DCB09 /* LaunchScreen.storyboard */,
@@ -77,6 +80,7 @@
 				990C20E4273CBDDB001DCB09 /* Sources */,
 				990C20E5273CBDDB001DCB09 /* Frameworks */,
 				990C20E6273CBDDB001DCB09 /* Resources */,
+				990C2105273CCEF2001DCB09 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -133,14 +137,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		990C2105273CCEF2001DCB09 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format # 自動修正の有効化\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		990C20E4273CBDDB001DCB09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				990C20F0273CBDDB001DCB09 /* ViewController.swift in Sources */,
+				990C2102273CC038001DCB09 /* AdditionViewController.swift in Sources */,
 				990C20EC273CBDDB001DCB09 /* AppDelegate.swift in Sources */,
 				990C20EE273CBDDB001DCB09 /* SceneDelegate.swift in Sources */,
+				990C2104273CC066001DCB09 /* SubtractionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
